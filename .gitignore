@@ -5,4 +5,4 @@ api.json
 playground/
 node_modules/
 .jsbeautifyrc
-
+server.log
