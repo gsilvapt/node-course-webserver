@@ -5,6 +5,10 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+
+// Constant defined to be used by Heroku
+const PORT = process.env.PORT || 3000;
+
 var app = express(); // Defines a new Express application
 
 // Registers partials and other parts of express middleware
@@ -61,6 +65,6 @@ app.get('/bad', (req, res) => {
   });
 })
 
-app.listen(3000, () => {
-  console.log('Server is up on port 3000');
+app.listen(PORT, () => {
+  console.log(`Server is up on port ${PORT}`);
 });
